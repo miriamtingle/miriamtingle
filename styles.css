@@ -3,10 +3,10 @@
     --bg: #f7fafc;
     --card: #ffffff;
     /* --accent: #8f7f78; */
-     --accent: #998781;
+    --accent: #998781;
 
     --text: #0f172a;
-    --muted: #7a6b65;
+    --muted: #625c59;
     --radius: 8px;
     --max-width: 1100px;
 }
@@ -22,7 +22,11 @@ body {
 
 body {
     margin: 0;
-     font-size: 13px; font-weight: normal; font-family: Cousine, monospace; line-height: 1.9; font-style: normal; 
+    font-size: 13px;
+    font-weight: normal;
+    font-family: Cousine, monospace;
+    line-height: 1.9;
+    font-style: normal;
     background: var(--bg);
     color: var(--text);
     -webkit-font-smoothing: antialiased;
@@ -62,8 +66,17 @@ body {
 }
 
 .logo {
-     font-size: 13px; font-weight: normal; font-family: Cousine, monospace; line-height: 1.9; font-style: normal; 
-    }
+    font-size: 13px;
+    font-weight: normal;
+    font-family: Cousine, monospace;
+    line-height: 1.9;
+    font-style: normal;
+}
+
+.logo a, .logo a:link, .logo a:visited, .logo a:active, .logo a:focus {
+    color: inherit; /* keep same color for the anchor in all states */
+    text-decoration: none; /* remove underline for the anchor in all states */
+}
 
 .site-nav {
     margin-top: 8px;
@@ -71,6 +84,7 @@ body {
     flex-direction: column;
     gap: 6px;
 }
+
 .site-nav a {
     color: var(--muted);
     text-decoration: none;
@@ -83,6 +97,11 @@ body {
     color: var(--accent);
 }
 
+.site-nav a.nav-active {
+    color: var(--accent);
+    font-weight: 600;
+}
+
 
 .site-footer {
     padding: 18px 0;
@@ -93,7 +112,17 @@ body {
 
 /* On wider screens, keep header elements left-aligned but slightly larger spacing */
 @media (min-width: 760px) {
-    .site-header .container { padding: 18px 0; }
-    .site-nav { flex-direction: row; gap: 16px; margin-top: 12px; }
-    .site-nav a { padding: 6px 0; }
+    .site-header .container {
+        padding: 18px 0;
+    }
+
+    .site-nav {
+        flex-direction: row;
+        gap: 16px;
+        margin-top: 12px;
+    }
+
+    .site-nav a {
+        padding: 6px 0;
+    }
 }
